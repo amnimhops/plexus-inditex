@@ -1,2 +1,0 @@
-# plexus-inditex
-Prueba técnica
