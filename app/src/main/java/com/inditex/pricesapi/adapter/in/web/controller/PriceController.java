@@ -1,7 +1,7 @@
 package com.inditex.pricesapi.adapter.in.web.controller;
 
-import com.example.app.api.ApiApi;
-import com.example.app.model.Price;
+import com.inditex.pricesapi.in.web.api.ApiApi;
+import com.inditex.pricesapi.in.web.dto.Price;
 import com.inditex.pricesapi.adapter.in.web.exception.ResourceNotFoundException;
 import com.inditex.pricesapi.core.domain.port.in.QueryPricesUseCase;
 import org.springframework.http.ResponseEntity;
@@ -12,8 +12,7 @@ import java.time.LocalDateTime;
 
 @Validated
 @RestController
-public class PriceController implements ApiApi
-{
+public class PriceController implements ApiApi {
     QueryPricesUseCase queryPricesUseCase;
     PriceWebMapper priceWebMapper;
 

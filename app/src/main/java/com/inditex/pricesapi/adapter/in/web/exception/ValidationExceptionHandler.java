@@ -1,6 +1,6 @@
 package com.inditex.pricesapi.adapter.in.web.exception;
 
-import com.example.app.model.ApiError;
+import com.inditex.pricesapi.in.web.dto.ApiError;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.ResponseEntity;
@@ -14,13 +14,13 @@ import java.util.Map;
 @RestControllerAdvice()
 @Order(1)
 public class ValidationExceptionHandler {
-    private static final Map<Class<?>,ErrorCode> exceptionErrorCodes = Map.of(
+    private static final Map<Class<?>, ErrorCode> exceptionErrorCodes = Map.of(
             ConstraintViolationException.class, ErrorCode.INVALID_PARAMETER_VALUE,
             MethodArgumentTypeMismatchException.class, ErrorCode.INVALID_PARAMETER_FORMAT,
             MissingServletRequestParameterException.class, ErrorCode.MISSING_PARAMETER);
 
-    private ErrorCode getExceptionErrorCode(Exception e){
-        return exceptionErrorCodes.getOrDefault(e.getClass(),ErrorCode.UNKNOWN_ERROR);
+    private ErrorCode getExceptionErrorCode(Exception e) {
+        return exceptionErrorCodes.getOrDefault(e.getClass(), ErrorCode.UNKNOWN_ERROR);
     }
 
     @ExceptionHandler({

@@ -15,7 +15,7 @@
     <name>Prices API - Spring Boot Application</name>
 
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
         <spring-boot.version>4.0.1</spring-boot.version>
         <openapi-generator.version>7.3.0</openapi-generator.version>
         <swagger.annotations.version>2.2.34</swagger.annotations.version>
@@ -89,6 +89,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -140,8 +151,8 @@
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
                             <output>${project.build.directory}/generated-sources/openapi</output>
-                            <apiPackage>com.example.app.api</apiPackage>
-                            <modelPackage>com.example.app.model</modelPackage>
+                            <apiPackage>com.inditex.pricesapi.in.web.api</apiPackage>
+                            <modelPackage>com.inditex.pricesapi.in.web.dto</modelPackage>
 
                             <configOptions>
                                 <useSpringBoot3>true</useSpringBoot3>

@@ -1,6 +1,6 @@
 package com.inditex.pricesapi.adapter.in.web.exception;
 
-import com.example.app.model.ApiError;
+import com.inditex.pricesapi.in.web.dto.ApiError;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +16,7 @@ public class DefaultExceptionHandler {
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(new ApiError(ErrorCode.SERVER_ERROR.name(), exception.getMessage()));
     }
+
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ApiError> handleResourceNotFoundException(ResourceNotFoundException exception) {
         return ResponseEntity
