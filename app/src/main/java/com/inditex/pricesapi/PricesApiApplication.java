@@ -1,4 +1,4 @@
-package com.inditex.pricesapi.app;
+package com.inditex.pricesapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

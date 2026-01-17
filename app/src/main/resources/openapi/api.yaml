@@ -27,20 +27,13 @@ paths:
             type: integer
             format: int64
           description: ID del producto
-        - name: start
+        - name: date
           in: query
           required: true
           schema:
             type: string
             format: date-time
-          description: Fecha/hora de inicio del rango
-        - name: end
-          in: query
-          required: true
-          schema:
-            type: string
-            format: date-time
-          description: Fecha/hora de fin del rango
+          description: Fecha/hora de aplicación
       responses:
         '200':
           description: Precio encontrado

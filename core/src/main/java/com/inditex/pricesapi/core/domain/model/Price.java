@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 
 public record Price(
         long id,
-        Brand brand,
-        Product product,
+        long brandId,
+        long productId,
         LocalDateTime startDate,
         LocalDateTime endDate,
         BigDecimal value,

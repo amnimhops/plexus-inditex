@@ -141,7 +141,7 @@
                                 <interfaceOnly>true</interfaceOnly>
                                 <delegatePattern>true</delegatePattern>
                                 <useJakarta>true</useJakarta>
-                                <dateLibrary>java8</dateLibrary>
+                                <dateLibrary>java8-localdatetime</dateLibrary>
                                 <useOptional>true</useOptional>
                                 <hideGenerationTimestamp>true</hideGenerationTimestamp>
                             </configOptions>

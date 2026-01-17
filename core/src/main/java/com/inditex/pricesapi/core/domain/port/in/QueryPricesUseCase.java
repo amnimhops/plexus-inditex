@@ -8,5 +8,5 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 public interface QueryPricesUseCase {
-    Optional<Price> findPrice(Brand brand, Product product, LocalDateTime start, LocalDateTime end);
+    Optional<Price> findPriceByDate(long brandId, long productId, LocalDateTime date);
 }

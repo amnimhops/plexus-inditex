@@ -66,19 +66,19 @@ Es importante que el archivo se denomine ` PruebaTécnica_NombreApellido1Apellid
 ## Recomendaciones generales
 
 - &#x2705;Aplicar **arquitectura Hexagonal**:
-    - Separar las capas y limitar la visibilidad entre aplicación e infraestructura a través de interfaces o puertos de dominio.
+    - &#x2705;Separar las capas y limitar la visibilidad entre aplicación e infraestructura a través de interfaces o puertos de dominio.
     - &#x2705;Evitar el uso de frameworks en la capa de dominio, incluido Spring.
     - Realizar las inyecciones de dependencia por constructor.
     - Crear una estructura de paquetes adecuada: en infraestructura estructurar por tecnología (por ejemplo, base de datos, API REST, etc.), en dominio por entidad de dominio. Muy valorable crear submódulos con cada capa usando Maven.
 - Buenas prácticas: limpieza de código, nombres de variables y métodos apropiados, aplicar metodología SOLID. Evitar comentarios innecesarios.
 - Uso de **inmutabilidad** con `records` y variables finales.
-- Evitar el uso de **queries nativas**.
+- &#x2705;Evitar el uso de **queries nativas**.
 - &#x2705;Muy valorable aplicar **API First** con OpenAPI para generar modelos y controladores.
 - Manejo de excepciones:
-    - Elevar las excepciones **checked** en capa de aplicación.
-    - Capturarlas en el controlador y transformar en Runtime exceptions que se manejen con **@ControllerAdvice** para enviar una respuesta de error.
-- Evitar el uso de `get`, `isPresent`, etc., de Optional: usar `map`, `orElse`, `orElseThrow`.
-- Incluir **MapStruct** para los mappers entre entidades de cada capa.
+    - &#x2705;Elevar las excepciones **checked** en capa de aplicación.
+    - &#x2705;Capturarlas en el controlador y transformar en Runtime exceptions que se manejen con **@ControllerAdvice** para enviar una respuesta de error.
+- &#x2705;Evitar el uso de `get`, `isPresent`, etc., de Optional: usar `map`, `orElse`, `orElseThrow`.
+- &#x2705;Incluir **MapStruct** para los mappers entre entidades de cada capa.
 - Incluir un **README** con descripción del proyecto: objetivo, tech stack, desarrollo, seguridad, cómo ejecutar los tests y levantar el proyecto.
 
 ---
