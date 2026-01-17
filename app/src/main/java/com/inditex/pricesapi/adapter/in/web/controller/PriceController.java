@@ -12,7 +12,8 @@ import java.time.LocalDateTime;
 
 @Validated
 @RestController
-public class PriceController implements ApiApi {
+public class PriceController implements ApiApi
+{
     QueryPricesUseCase queryPricesUseCase;
     PriceWebMapper priceWebMapper;
 
