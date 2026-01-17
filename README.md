@@ -8,6 +8,9 @@
 - H2 como base de datos
 - _API first_, toda la generación del código se hace automáticamente
 
+# Requisitos
+- Java 17
+
 # Instrucciones
 
 ## Generación de código y compilación
